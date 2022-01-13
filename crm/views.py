@@ -1,11 +1,14 @@
 from django.shortcuts import render
 from .models import Order
+from .forms import OrderForms
 
 
 # Create your views here.
 def first_page(request):
     objects_list = Order.objects.all()
-    return render(request, './index.html', {'objects_list': objects_list})
+    form = OrderForms()
+    return render(request, './index.html', {'objects_list': objects_list,
+                                            'form': form})
 
 
 def thanks_page(request):
