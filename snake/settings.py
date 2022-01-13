@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # my apps
     'crm.apps.CrmConfig',
     'cms.apps.CmsConfig',
+    'price.apps.PriceConfig',
 ]
 
 MIDDLEWARE = [
